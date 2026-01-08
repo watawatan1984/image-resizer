@@ -29,13 +29,13 @@ export const resizeImage = (
           return;
         }
 
-        // Use high quality image smoothing
+        // 高画質設定を強制
         ctx.imageSmoothingEnabled = true;
         ctx.imageSmoothingQuality = 'high';
 
         ctx.drawImage(img, 0, 0, newWidth, newHeight);
 
-        // Convert to blob (maintaining original format if possible, otherwise PNG)
+        // クオリティを1.0 (最大) に設定して画質の劣化を最小限に抑える
         const mimeType = file.type || 'image/png';
         canvas.toBlob(
           (blob) => {
@@ -54,7 +54,7 @@ export const resizeImage = (
             }
           },
           mimeType,
-          0.9
+          1.0 
         );
       };
       img.onerror = () => reject(new Error('Failed to load image'));
