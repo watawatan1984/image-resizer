@@ -1,0 +1,5 @@
+{
+  "name": "SmartResizer - 簡単画像リサイズ",
+  "description": "JPG, PNG, WebP画像を瞬時にリサイズ。アスペクト比を保ったまま、最適なサイズに加工してダウンロードできます。初心者でも迷わない直感的な操作感を実現しています。",
+  "requestFramePermissions": []
+}
